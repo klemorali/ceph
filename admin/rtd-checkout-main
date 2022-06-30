@@ -1,0 +1,6 @@
+#!/bin/bash
+# See .readthedocs.yml
+set -x
+if git symbolic-ref HEAD; then
+  git checkout origin/main -- doc/releases
+fi
