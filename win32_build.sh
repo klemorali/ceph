@@ -13,12 +13,14 @@ BUILD_DIR="${BUILD_DIR:-${CEPH_DIR}/build}"
 DEPS_DIR="${DEPS_DIR:-$CEPH_DIR/build.deps}"
 ZIP_DEST="${ZIP_DEST:-$BUILD_DIR/ceph.zip}"
 
-CLEAN_BUILD=${CLEAN_BUILD:-}
+#CLEAN_BUILD=${CLEAN_BUILD:-}
+CLEAN_BUILD=1
 SKIP_BUILD=${SKIP_BUILD:-}
 # Usefull when packaging existing binaries.
 SKIP_CMAKE=${SKIP_CMAKE:-}
 SKIP_DLL_COPY=${SKIP_DLL_COPY:-}
-SKIP_TESTS=${SKIP_TESTS:-}
+#SKIP_TESTS=${SKIP_TESTS:-}
+SKIP_TESTS=1
 SKIP_BINDIR_CLEAN=${SKIP_BINDIR_CLEAN:-}
 # Use Ninja's default, it might be useful when having few cores.
 NUM_WORKERS_DEFAULT=$(( $num_vcpus + 2 ))

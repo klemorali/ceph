@@ -137,10 +137,10 @@ fi
 cd $curlSrcDir
 ./buildconf
 ./configure --prefix=$curlDir --with-ssl=$sslDir --with-zlib=$zlibDir \
-            --host=${MINGW_BASE} --libdir="$curlDir/lib"
+            --host="x86_64-microsoft-windows" --libdir="$curlDir/lib" 
+            #--host=${MINGW_BASE} --libdir="$curlDir/lib" 
 _make
 _make install
-
 
 echo "Building boost."
 cd $depsSrcDir
